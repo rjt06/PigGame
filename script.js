@@ -14,7 +14,7 @@ let player1CurrentScore = 0;
 let player2CurrentScore = 0;
 let player1TotalScore = 0;
 let player2TotalScore = 0;
-const winningScore = 9;
+const winningScore = 99;
 
 document.querySelector(".roll-dice").addEventListener("click", () => {
   if (player1TotalScore < winningScore && player2TotalScore < winningScore) {
@@ -160,4 +160,5 @@ document.addEventListener("keydown", (e) => {
       restart()
       break;
   }
+
 })
