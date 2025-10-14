@@ -1,0 +1,219 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lilita+One&family=Patrick+Hand&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Zain:ital,wght@0,200;0,300;0,400;0,700;0,800;0,900;1,300;1,400&display=swap');
+
+html {
+  font-family: "Quicksand", sans-serif;
+}
+
+/* .hidden {
+  display: none;
+} */
+
+body {
+  user-select: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  box-sizing: border-box;
+  background: linear-gradient(160deg, #ff0051, #d000ff);
+  background-repeat: no-repeat;
+}
+
+/* -------------------main */
+
+
+.main {
+  position: relative;
+  display: flex;
+  width: 50rem;
+  /* background-color: rgba(255, 250, 230, 0.4); */
+  background: linear-gradient(160deg, #ff3f7c, #dc3fff);
+  border-radius: 3rem;
+  box-shadow: 0rem 0.6rem 1rem rgba(0, 0, 0, 0.4);
+}
+
+/* --------------------Player Card */
+.player-card {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 4rem 6rem 4rem 6rem;
+  z-index: 100;
+}
+
+.player-card h1 {
+  font-size: 2.6rem;
+  margin: 0 0 1.6rem 0;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.total-score {
+  font-size: 3.6rem;
+  color: #ff004c;
+  text-shadow: 0rem 0rem 2rem rgba(255, 255, 255, 0.8);
+  margin-bottom: 8rem;
+  font-weight: 900;
+}
+
+/* Current Card */
+.current-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.6rem;
+  padding: 1rem 2.6rem 0.6rem 2.6rem;
+  border-radius: 0.6rem;
+  background-color: #ff4980;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
+}
+
+.current-1-score {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.current-2-score {
+  font-size: 2rem;
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* ---------------Hightlight Card */
+.highlight-card {
+  position: absolute;
+  height: 100%;
+  width: 50%;
+  background-color: rgba(255, 190, 230, 0.7);
+  border-radius: 3rem;
+  border: 0.1rem solid rgba(0, 0, 0, 0.2);
+  box-shadow: 0.05rem 0.05rem white, -0.05rem -0.05rem white, inset 0.8rem 0.8rem 1rem rgba(0, 0, 0, 0.2), inset -0.8rem -0.8rem 1rem rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease-in;
+}
+
+/* ---------------Absolute Buttons */
+.buttons-card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1rem;
+  z-index: 200;
+}
+
+.btn {
+  font-size: 0.9rem;
+  padding: 0.4rem 1rem;
+  background-color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  color: rgba(0, 0, 0, 0.6);
+  border-radius: 5rem;
+  box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:active {
+  transform: scale(0.9);
+  background-color: white;
+}
+
+.btn:hover {
+  background-color: white;
+}
+
+
+.new-game {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.6s;
+}
+
+.dice {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4.6rem;
+  width: 4.6rem;
+  background-color: rgb(244, 244, 244);
+  border-radius: 0.86rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.2);
+  transition: all 0.08s;
+}
+
+.dice img {
+  width: 100%;
+}
+
+.status-board-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  align-items: center;
+  border-radius: 1.4rem;
+  background-color: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0.6rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+  margin-bottom: 2rem;
+  width: 11.6rem;
+}
+
+.info-panel {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.status-board {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.12);
+  box-shadow: 0 0rem 0 rgb(0, 0, 0);
+  width: 77%;
+}
+
+.winner-announce {
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-align: center;
+  padding-top: 1rem;
+  color: rgba(0, 0, 0, 0.9);
+  background-color: rgba(255, 255, 255, 0.8);
+  width: 50rem;
+  height: 6rem;
+  border-top-left-radius: 3rem;
+  border-top-right-radius: 3rem;
+  transform: translate(0, 100%);
+  transition: all 0.6s;
+}
+
+@media(min-width: 0px) and (max-width: 580px) {
+  html {
+    font-size: 10px;
+  }
+
+  body {
+    background: linear-gradient(245deg, #ff3575, #c52ee7);
+  }
+
+  main {
+    transform: rotate(90deg);
+  }
+
+  .player-card h1 {
+    width: 12rem;
+  }
+}
