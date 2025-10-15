@@ -90,10 +90,9 @@ function addToCurrent(randomNum) {
       statusBoard.textContent = "🥇 PLAYER 1 WON ";
       winnerAnnounce.textContent = "🎉 PLAYER 1 WON THE GAME 🎉";
       main.style.boxShadow = "0rem 0.6rem 1rem rgba(0, 0, 0, 0.4), 0 -0.4rem 0.8rem rgba(0, 0, 0, 0.4)";
-      winnerAnnounce.style.transform = "translate(0, 45%)";
+      winnerAnnounce.style.transform = "translate(0, -70%)";
       winnerAnnounce.style.boxShadow = "0 0.6rem 1rem rgba(0, 0, 0, 0.4)";
       newGameBtn.style.transform = "scale(1.5)";
-      newGameBtn.style.backgroundColor = "white";
     }
   } else if (playerTurnNum === 2) {
     statusBoard.textContent = "🤸 PLAYER 2 TURN"
@@ -109,16 +108,15 @@ function addToCurrent(randomNum) {
       statusBoard.textContent = "🥇 PLAYER 2 WON ";
       winnerAnnounce.textContent = "🎉 PLAYER 2 WON THE GAME 🎉";
       main.style.boxShadow = "0rem 0.6rem 1rem rgba(0, 0, 0, 0.4), 0 -0.4rem 0.8rem rgba(0, 0, 0, 0.4)";
-      winnerAnnounce.style.transform = "translate(0, 45%)"
+      winnerAnnounce.style.transform = "translate(0, -70%)"
       winnerAnnounce.style.boxShadow = "0 0.6rem 1rem rgba(0, 0, 0, 0.4)";
       newGameBtn.style.transform = "scale(1.5)";
-      newGameBtn.style.backgroundColor = "white";
     }
   }
 }
 function playerChange() {
   if (playerTurnNum === 1) {
-    document.querySelector(".highlight-card").style.transform = "translate(100%, 0%)"
+    document.querySelector(".highlight-card").style.transform = "translate(99%, 0%)"
     statusBoard.textContent = "🤸 PLAYER 2 TURN"
     playerTurnNum = 2;
   } else if (playerTurnNum === 2) {
@@ -140,6 +138,7 @@ function changeDice(randomNum) {
     diceEl.innerHTML = `<img src="dice-${randomNum}.svg" alt="Dice">`
     diceEl.style.transform = "translate(0rem, 0rem),rotate(0deg)";
   }, 1000)
+  newGameBtn.style.transform = "scale(1)";
 }
 
 document.addEventListener("keydown", (e) => {
@@ -160,5 +159,4 @@ document.addEventListener("keydown", (e) => {
       restart()
       break;
   }
-
 })
