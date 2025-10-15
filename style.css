@@ -23,11 +23,15 @@ body {
 
 /* -------------------main */
 
+main {
+  width: 50rem;
+}
 
 .main {
   position: relative;
   display: flex;
-  width: 50rem;
+  width: 100%;
+  justify-content: space-between;
   /* background-color: rgba(255, 250, 230, 0.4); */
   background: linear-gradient(160deg, #ff3f7c, #dc3fff);
   border-radius: 3rem;
@@ -36,6 +40,7 @@ body {
 
 /* --------------------Player Card */
 .player-card {
+  width: 50%;
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -127,7 +132,6 @@ body {
 
 .btn:active {
   transform: scale(0.9);
-  background-color: white;
 }
 
 .btn:hover {
@@ -192,11 +196,12 @@ body {
   padding-top: 1rem;
   color: rgba(0, 0, 0, 0.9);
   background-color: rgba(255, 255, 255, 0.8);
+  margin-bottom: -8rem;
   width: 50rem;
   height: 6rem;
   border-top-left-radius: 3rem;
   border-top-right-radius: 3rem;
-  transform: translate(0, 100%);
+  /* transform: translate(0, -70%); */
   transition: all 0.6s;
 }
 
@@ -215,5 +220,26 @@ body {
 
   .player-card h1 {
     width: 12rem;
+  }
+
+  .btn {
+    font-size: 1.6rem;
+  }
+
+  .new-game {
+    margin-bottom: 1rem;
+    font-size: 0.8rem;
+  }
+
+  .status-board-box {
+    margin-bottom: 1.4rem;
+  }
+
+  .status-board {
+    font-size: 0.9rem;
+  }
+
+  .roll-dice {
+    margin-bottom: 0.8rem;
   }
 }
